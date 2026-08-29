@@ -4,9 +4,9 @@ test.describe('Authentication & Access Control E2E Flows', () => {
   test('renders the Suez Canal Bank login page with enterprise branding', async ({ page }) => {
     await page.goto('/login');
 
-    await expect(page).toHaveTitle(/EPCMS | Suez Canal Bank/);
+    await expect(page).toHaveTitle(/Suez Canal Bank/);
     await expect(page.getByRole('heading', { name: 'Sign In to EPCMS' })).toBeVisible();
-    await expect(page.getByText('Suez Canal Bank')).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Suez Canal Bank' })).toBeVisible();
     await expect(page.getByText('Demo Accounts (Instant Fill):')).toBeVisible();
   });
 

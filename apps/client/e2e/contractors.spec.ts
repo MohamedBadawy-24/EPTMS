@@ -59,6 +59,6 @@ test.describe('Contractor Performance Scorecards E2E Tests', () => {
     await expect(page.getByText('6. Documentation & Submittals')).toBeVisible();
 
     // Verify overall score badge
-    await expect(page.getByText('86.7 / 100')).toBeVisible();
+    await expect(page.getByText('86.7 / 100').first()).toBeVisible();
   });
 });

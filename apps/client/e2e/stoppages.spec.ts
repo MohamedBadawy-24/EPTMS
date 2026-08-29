@@ -103,7 +103,7 @@ test.describe('Project Timeline & Stoppages Module E2E Flow', () => {
 
     // 2. Verify Metrics with Live label
     await expect(page.getByText('100 Days')).toBeVisible();
-    await expect(page.getByText('135 Days')).toBeVisible();
+    await expect(page.getByText('135 Days').first()).toBeVisible();
 
     // 3. Verify Table with Ongoing Badge and Live indicator
     await expect(page.getByText('Ongoing')).toBeVisible();
